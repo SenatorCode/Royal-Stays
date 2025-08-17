@@ -91,7 +91,7 @@ const setMinDates = () => {
 };
 setMinDates();
 
-/* Update checkout.min when checkin changes (enforce at least 1 night) */
+/* Update checkout.min when checking changes (enforce at least 1 night) */
 checkinEl.addEventListener('change', () => {
   if (!checkinEl.value) {
     checkoutEl.min = '';
@@ -157,15 +157,6 @@ contactForm.addEventListener('submit', async (e) => {
       email,
       message: msg
     };
-    try {
-      // Optional: post to your endpoint (Formspree, serverless function, etc.)
-      // await fetch('https://formspree.io/f/YOUR_FORM_ID', { method: 'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(payload) });
-
-      showModal('Message Sent 📧', 'Thanks — we’ll get back to you shortly.');
-      contactForm.reset();
-    } catch (err) {
-      showModal('Oops', 'There was an error sending your message. Please try again.');
-    }
   }
 });
 
@@ -233,5 +224,3 @@ const onScrollSpy = () => {
 window.addEventListener('scroll', onScrollSpy, { passive: true });
 window.addEventListener('resize', onScrollSpy);
 onScrollSpy(); // init
-
-/* End of script */

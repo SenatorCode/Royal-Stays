@@ -201,7 +201,7 @@ img{ max-width:100%; display:block; }
 }
 .contact-form input:focus, .contact-form textarea:focus{ border-color: var(--royal); }
 
-/* ===== SEND MESSAGE BUTTON FIX: centered, normal size, responsive ===== */
+/* ===== SEND MESSAGE BUTTON ===== */
 .contact-form button {
   grid-column: 1 / -1;         /* place under inputs, full width of the form area */
   justify-self: center;        /* center in the grid */
