@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Royal Stays — Where Elegance Meets Comfort</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="./img/logo.png" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#hero" class="brand">
+        <img src="./img/logo2.png" alt="Royal Stays logo" />
+        <span>Royal Stays</span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul id="navMenu" class="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="divider" aria-hidden="true"></li>
+        <li>
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero" role="banner" aria-label="Hero section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="tag">Where Elegance Meets Comfort</p>
+      <h1>Experience Luxury Hospitality</h1>
+      <p class="sub">In the heart of the city — crafted for discerning guests.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary">Book Now</a>
+        <a href="#rooms" class="btn btn-outline">Explore Rooms</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROOMS ===== -->
+  <section id="rooms" class="section container">
+    <h2 class="section-title">Rooms & Suites</h2>
+    <p class="section-sub">Pick your vibe. Every detail is premium.</p>
+
+    <div class="grid cards-4">
+      <article class="card">
+        <img src="./img/presidential.jpg" alt="Presidential Suite" />
+        <div class="card-body">
+          <h3>Presidential Suite</h3>
+          <p>Panoramic skyline, private lounge, concierge-on-call.</p>
+          <button class="btn btn-secondary">View Details</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="./img/executive.jpg" alt="Executive Room" />
+        <div class="card-body">
+          <h3>Executive Room</h3>
+          <p>Quiet workspace meets cozy luxury for business travelers.</p>
+          <button class="btn btn-secondary">View Details</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="./img/deluxe.jpg" alt="Deluxe Room" />
+        <div class="card-body">
+          <h3>Deluxe Room</h3>
+          <p>Spacious comfort with modern amenities and soft lighting.</p>
+          <button class="btn btn-secondary">View Details</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="./img/family.jpeg" alt="Family Suite" />
+        <div class="card-body">
+          <h3>Family Suite</h3>
+          <p>Two-bed layout, reading nook, and kid-friendly perks.</p>
+          <button class="btn btn-secondary">View Details</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING ===== -->
+  <section id="booking" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Book Your Stay</h2>
+      <p class="section-sub">Instant confirmation. Flexible dates.</p>
+
+      <form id="bookingForm" class="booking-form" novalidate>
+        <div class="field">
+          <label for="checkin">Check-in</label>
+          <input type="date" id="checkin" required />
+          <small class="error" id="err-checkin"></small>
+        </div>
+
+        <div class="field">
+          <label for="checkout">Check-out</label>
+          <input type="date" id="checkout" required />
+          <small class="error" id="err-checkout"></small>
+        </div>
+
+        <div class="field">
+          <label for="guests">Guests</label>
+          <input type="number" id="guests" min="1" step="1" placeholder="e.g., 2" required />
+          <small class="error" id="err-guests"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+      </form>
+
+      <p class="fineprint">By booking, you agree to our terms & policies.</p>
+    </div>
+  </section>
+
+  <!-- ===== FACILITIES ===== -->
+  <section id="facilities" class="section container">
+    <h2 class="section-title">Facilities</h2>
+    <p class="section-sub">Curated experiences, maximum serenity.</p>
+
+    <div class="grid cards-4 facilities">
+      <article class="facility">
+        <div class="icon">🏊‍♂️</div>
+        <h3>Infinity Pool</h3>
+        <p>Sunset deck with skyline views and poolside service.</p>
+      </article>
+
+      <article class="facility">
+        <div class="icon">💆🏽‍♀️</div>
+        <h3>Spa & Wellness</h3>
+        <p>Therapeutic treatments, sauna, and aromatherapy.</p>
+      </article>
+
+      <article class="facility">
+        <div class="icon">🍽️</div>
+        <h3>Fine Dining</h3>
+        <p>Chef’s tasting menu, seasonal produce, halal options.</p>
+      </article>
+
+      <article class="facility">
+        <div class="icon">🎬</div>
+        <h3>Private Cinema</h3>
+        <p>Cozy lounge, curated films, and premium sound.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="section alt">
+    <div class="container">
+      <h2 class="section-title">What Guests Say</h2>
+      <div class="carousel" aria-roledescription="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <figure class="testimonial">
+            <blockquote>“A truly royal experience — five stars from arrival to checkout.”</blockquote>
+            <figcaption>— Sarah J.</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote>“Spotless rooms, calm ambience, staff that actually care.”</blockquote>
+            <figcaption>— Michael B.</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote>“From spa to dinner, everything felt curated just for me.”</blockquote>
+            <figcaption>— Aisha K.</figcaption>
+          </figure>
+        </div>
+        <button class="carousel-btn prev" id="prevSlide" aria-label="Previous review">‹</button>
+        <button class="carousel-btn next" id="nextSlide" aria-label="Next review">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="section container">
+    <h2 class="section-title">Gallery</h2>
+    <p class="section-sub">Tap to enlarge.</p>
+
+    <div class="grid gallery">
+      <img src="./img/lobby.jpg" alt="Lobby" class="glight" />
+      <img src="./img/suites.jpeg" alt="Suite" class="glight" />
+      <img src="./img/pool-decks.webp" alt="Pool deck" class="glight" />
+      <img src="./img/restaurants.jpeg" alt="Restaurant" class="glight" />
+      <img src="./img/lounge.jpg" alt="Lounge" class="glight" />
+      <img src="./img/bedroom.jpg" alt="Bedroom" class="glight" />
+      <img src="./img/spa.jpg" alt="Spa room" class="glight" />
+      <img src="./img/cinema.webp" alt="Cinema" class="glight" />
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <dialog id="lightbox" class="lightbox">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Close">×</button>
+    <img id="lightboxImg" alt="Expanded gallery image" />
+    <p id="lightboxCap" class="lightbox-cap"></p>
+  </dialog>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="contact-info">
+        📍 123 Royal Street, Lagos, Nigeria · 📞 +234 800 123 4567 · ✉️ info@royalstays.com
+      </p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="field">
+          <label for="cname">Name</label>
+          <input id="cname" type="text" placeholder="Your full name" required />
+          <small class="error" id="err-cname"></small>
+        </div>
+
+        <div class="field">
+          <label for="cemail">Email</label>
+          <input id="cemail" type="email" placeholder="you@example.com" required />
+          <small class="error" id="err-cemail"></small>
+        </div>
+
+        <div class="field">
+          <label for="cmsg">Message</label>
+          <textarea id="cmsg" rows="5" placeholder="How can we help?" required></textarea>
+          <small class="error" id="err-cmsg"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <img src="./img/logo.png" alt="Royal Stays logo" />
+        <p>Royal Stays — Where Elegance Meets Comfort</p>
+      </div>
+
+      <div class="foot-social">
+        <a href="#" aria-label="Instagram" class="soc">📸</a>
+        <a href="#" aria-label="LinkedIn" class="soc">💼</a>
+        <a href="#" aria-label="Twitter" class="soc">🐦</a>
+      </div>
+
+      <p class="copy">© <span id="year"></span> Royal Stays. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="./script.js"></script>
+</body>
+</html>
