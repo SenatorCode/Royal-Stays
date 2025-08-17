@@ -8,7 +8,7 @@
 - `index.html` — main markup (semantic sections, SEO meta + JSON-LD).
 - `style.css` — responsive styling, theme support, focus states.
 - `script.js` — UI behaviour: theme persistence, booking & contact validation, carousel, scroll-spy, small UX polish.
-- `img/` — images (place your assets here).
+- `img/` — images
 
 ---
 
@@ -29,7 +29,7 @@
 - Performance:
   - `preconnect` to Google Fonts and `loading="lazy"` on gallery images
   - Respect for `prefers-reduced-motion`
-  
+
 ---
 
 ## Local development
